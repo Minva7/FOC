@@ -5,7 +5,7 @@
 int pwmA = 32;
 int pwmB = 33;
 int pwmC = 25;
-
+int m_en = 12;
 //初始变量及函数定义
 #define _constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
 //宏定义实现的一个约束函数,用于限制一个值的范围。
@@ -20,8 +20,8 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   //PWM设置
-  pinMode(12, OUTPUT);
-  digitalWrite(12,HIGH);
+  pinMode(m_en, OUTPUT);
+  digitalWrite(m_en,HIGH);
   pinMode(pwmA, OUTPUT);
   pinMode(pwmB, OUTPUT);
   pinMode(pwmC, OUTPUT);
@@ -111,5 +111,5 @@ float velocityOpenloop(float target_velocity){
 
 void loop() {
   // put your main code here, to run repeatedly:
-   velocityOpenloop(5);
+   velocityOpenloop(10);
 }
