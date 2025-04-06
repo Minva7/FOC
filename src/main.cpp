@@ -111,5 +111,5 @@ float velocityOpenloop(float target_velocity){
 
 void loop() {
   // put your main code here, to run repeatedly:
-   velocityOpenloop(5);
+   velocityOpenloop(10);
 }
